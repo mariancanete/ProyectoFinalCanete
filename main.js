@@ -5,18 +5,15 @@ const totalPriceElement = document.getElementById("totalPrice");
 
 let cart = [];
 
-// Function to update the total price in the cart
 const updateTotalPrice = () => {
     let total = cart.reduce((sum, item) => sum + item.precio, 0);
     totalPriceElement.innerText = `Total: $${total}`;
 };
 
-// Function to update the cart icon with the number of items
 const updateCartIcon = () => {
     carrito.innerText = `🛒 (${cart.length})`;
 };
 
-// Function to add product to the cart
 const addProductToCart = (product) => {
     const listProduct = document.getElementById("listProduct");
     const listElement = document.createElement("li");
@@ -28,7 +25,6 @@ const addProductToCart = (product) => {
     updateCartIcon();
 };
 
-// Function to create and add the "Comprar" button
 const createBuyButton = () => {
     const buyButton = document.createElement("button");
     buyButton.innerText = "Comprar";
@@ -87,11 +83,10 @@ carrito.addEventListener("click", () => {
         cartContainer.style.display = "none";
     } else {
         cartContainer.style.display = "block";
-        createBuyButton(); // Ensure the "Comprar" button is created when the cart is displayed
+        createBuyButton();
     }
 });
 
-// CSS to align the cart icon and container to the right
 const style = document.createElement('style');
 style.innerHTML = `
     #SeeCart {
