@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.12.2/dist/sweetalert2.min.css">
     <link rel="stylesheet" href="./style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -10,37 +11,31 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
       rel="stylesheet"
     />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Supermercado</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <title>Tienda Online</title>
   </head>
 
   <body>
-    <nav>
-      <h1 class="titulo">Almacen JS</h1>
+    <div class="header">
       <img
         src="https://images.vexels.com/content/200098/preview/shopping-cart-icon-shopping-cart-icon-2d9395.png"
-        alt="Logo"
-        class="logo"
+        alt="logoImage"
+        class="logoImage iconHeader"
       />
-      <h1 id="SeeCart" class="See-cart">🛒</h1>
-    </nav>
-    <div class="pageContainer">
-      <!-- show container -->
-      <div id="cartContainer" class="cart-container">
-        <h3>Carrito</h3>
-        <ul id="listProduct"></ul>
-        <div id="totalPrice"></div>
-      </div>
-
-      <div id="productList" class="products"></div>
+      <h1 class="titulo iconHeader">Tienda JS</h1>
+      <button id="SeeCart" class="cart-button iconHeader">🛒</button>
+    </div>
+    <div id="productList" class="products"></div>
+    <div id="cartContainer" class="cart-container">
+      <h3>Carrito</h3>
+      <ul id="listProduct"></ul>
+      <p id="totalPrice">Total: $0</p>
     </div>
     <footer>
-      <h1 class="ftr"></h1>
+      <h1 class="ftr">Gracias por su visita.</h1>
     </footer>
 
-    <script src="products.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="main.js"></script>
   </body>
 </html>
